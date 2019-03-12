@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/viewPanel"
+        android:layout_width="0dp"
+        android:layout_height="205dp"
+        android:background="#e6fafa"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPanel" />
+
+    <Button
+        android:id="@+id/sendButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/clickstyle"
+        android:text="Send"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/modeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:text="Mode:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/viewPanel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fanLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="15dp"
+        android:text="Fan:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/viewPanel"
+        app:layout_constraintTop_toBottomOf="@+id/modeLabel" />
+
+    <TextView
+        android:id="@+id/autoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="auto"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/fanLabel"
+        app:layout_constraintTop_toTopOf="@+id/fanLabel" />
+
+    <TextView
+        android:id="@+id/swngLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="15dp"
+        android:text="Swing:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/viewPanel"
+        app:layout_constraintTop_toBottomOf="@+id/fanLabel" />
+
+    <TextView
+        android:id="@+id/wakeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Wake up at 10:00 PM"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/viewPanel"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/viewPanel"
+        app:layout_constraintTop_toBottomOf="@+id/sleepText" />
+
+    <TextView
+        android:id="@+id/tempLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:text="Temprature"
+        android:textAlignment="textStart"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/viewPanel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/unitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="45dp"
+        android:text="°C"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/viewPanel"
+        app:layout_constraintTop_toBottomOf="@+id/tempLabel" />
+
+    <TextView
+        android:id="@+id/modeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Cold"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/modeLabel"
+        app:layout_constraintTop_toTopOf="@+id/modeLabel" />
+
+    <ImageView
+        android:id="@+id/fanImage"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toEndOf="@+id/fanLabel"
+        app:layout_constraintTop_toBottomOf="@+id/modeText"
+        app:srcCompat="@drawable/fan1" />
+
+    <TextView
+        android:id="@+id/swinText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="On"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/swngLabel"
+        app:layout_constraintTop_toTopOf="@+id/swngLabel" />
+
+    <TextView
+        android:id="@+id/tempratureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="5dp"
+        android:text="23"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/unitLabel"
+        app:layout_constraintTop_toTopOf="@+id/viewPanel" />
+
+    <TextView
+        android:id="@+id/powerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="On"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tempLabel"
+        app:layout_constraintStart_toStartOf="@+id/tempLabel"
+        app:layout_constraintTop_toTopOf="@+id/viewPanel" />
+
+    <TextView
+        android:id="@+id/sleepText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Sleep at 10:00 AM"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/viewPanel"
+        app:layout_constraintTop_toTopOf="@+id/viewPanel" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="4.0dip"
+        android:paddingTop="5.0dip"
+        android:paddingRight="4.0dip"
+        android:paddingBottom="1.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <ImageButton
+            android:id="@+id/sleepButton"
+            style="@android:style/Widget.Holo.Light.ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/clickstyle"
+            android:fadingEdge="horizontal|vertical"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/sleep"
+            tools:layout_editor_absoluteX="184dp"
+            tools:layout_editor_absoluteY="365dp" />
+
+        <ImageButton
+            android:id="@+id/modeButton"
+            style="@android:style/Widget.Holo.Light.ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/clickstyle"
+            android:fadingEdge="horizontal|vertical"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/mode"
+            tools:layout_editor_absoluteX="402dp"
+            tools:layout_editor_absoluteY="365dp" />
+
+        <ImageButton
+            android:id="@+id/fanButton"
+            style="@android:style/Widget.Holo.Light.ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/clickstyle"
+            android:fadingEdge="horizontal|vertical"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/fan"
+            tools:layout_editor_absoluteX="482dp"
+            tools:layout_editor_absoluteY="365dp" />
+
+        <ImageButton
+            android:id="@+id/swingButton"
+            style="@android:style/Widget.Holo.Light.ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/clickstyle"
+            android:fadingEdge="horizontal|vertical"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/swing"
+            tools:layout_editor_absoluteX="562dp"
+            tools:layout_editor_absoluteY="365dp" />
+
+        <ImageButton
+            android:id="@+id/wakeButton"
+            style="@android:style/Widget.Holo.Light.ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/clickstyle"
+            android:fadingEdge="horizontal|vertical"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/wake"
+            tools:layout_editor_absoluteX="812dp"
+            tools:layout_editor_absoluteY="365dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="150dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2">
+
+        <ImageButton
+            android:id="@+id/tempUpButton"
+            style="@android:style/Widget.Holo.Light.ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/clickstyle"
+            android:fadingEdge="horizontal|vertical"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/plus"
+            tools:layout_editor_absoluteX="92dp"
+            tools:layout_editor_absoluteY="281dp" />
+
+        <ImageButton
+            android:id="@+id/powerButton"
+            style="@android:style/Widget.Holo.Light.ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/clickstyle"
+            android:fadingEdge="horizontal|vertical"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/power1"
+            tools:layout_editor_absoluteX="159dp"
+            tools:layout_editor_absoluteY="282dp" />
+
+        <ImageButton
+            android:id="@+id/tempDownButton"
+            style="@android:style/Widget.Holo.Light.ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/clickstyle"
+            android:fadingEdge="horizontal|vertical"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/minus"
+            tools:layout_editor_absoluteX="228dp"
+            tools:layout_editor_absoluteY="281dp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
