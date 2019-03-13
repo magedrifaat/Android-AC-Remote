@@ -15,3 +15,12 @@ These are the lines you will most likely need to edit:
 ![](/Screenshots/UpdateRaw.PNG)
 * And the algorithm for calculating the checksum (if any)  
 ![](/Screenshots/Checksum.PNG)
+
+## Analyzing an unknown protocol
+IR protocols of Air conditioners are one of the hardest out there because when you press e.g. Temprature Up it doesn't just send a "Temprature Up" signal. Instead, it changes the state of the remote to the new temprature and sends a signal that that includes the whole state of the remote including the Tempratue, Fan, Mode, Time etc. and possibly also sends checksum bits and those bits are usually the hardest to analyze.  
+I have only ever analysed one device (the device used in this project) so I don't have a very good experience in that matter but here is some sources that could definitely help:
+* [Reverse engineering Hitachi air conditioner infrared remote commands](https://perhof.wordpress.com/2015/03/29/reverse-engineering-hitachi-air-conditioner-infrared-remote-commands/)
+* [Reverse Engineering Air Conditioner IR Remote Control Protocol](https://www.instructables.com/id/Reverse-engineering-of-an-Air-Conditioning-control/)
+* [Decoding Samsung AC IR Remote](https://github.com/markszabo/IRremoteESP8266/issues/505)
+* Tools like [IrScrutinizer](http://www.harctoolbox.org/IrScrutinizer.html) and [IrpTransmogrifier](https://github.com/bengtmartensson/IrpTransmogrifier) by [bengtmartensson](https://github.com/bengtmartensson) will make your life much easier once you get used to them.  
+I found stroring the different signals as categories in a [text file](/Protocol/analysis.txt) and then forming a [spreadsheet file](/Protocol/analysis.xlsx) from the data really helpful.
